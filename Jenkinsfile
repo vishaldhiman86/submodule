@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage ('Build') {
       steps {
-        checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'd817cfd8-3111-45df-8d1c-c1787ed73ed2', url: 'https://github.com/vishaldhiman86/hello-world-war.git']]])
+//        checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'd817cfd8-3111-45df-8d1c-c1787ed73ed2', url: 'https://github.com/vishaldhiman86/hello-world-war.git']]])
         sh 'mvn clean package'
         echo "Hello Devops Engineers"
 
